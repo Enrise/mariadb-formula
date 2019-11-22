@@ -1,6 +1,6 @@
 # Integration for MariaDB into Salt-minion
 {%- set os_family = salt['grains.get']('os_family', None) %}
-{%- set python_major_version = salt['grains.get']['pythonversion'][0] %}
+{%- set python_major_version = salt['grains.get']('pythonversion', ['2','7'])[0] %}
 {%- set pymysqldb_pkg = 'python-mysqldb' %}
 {%- if python_major_version == 3 %}
 {%- set pymysqldb_pkg = 'python3-mysqldb' %}

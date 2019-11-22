@@ -1,5 +1,5 @@
 # This state is meant for testing purposes only.
-{%- set python_major_version = salt['grains.get']['pythonversion'][0] %}
+{%- set python_major_version = salt['grains.get']('pythonversion', ['2','7'])[0] %}
 
 {%- set pypip_pkg = 'python-pip' %}
 {%- if python_major_version == 3 %}
