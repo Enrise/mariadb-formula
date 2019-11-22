@@ -5,7 +5,7 @@ env:
   global:
     - BS_PIP_ALLOWED=1
     - BS_ECHO_DEBUG=1
-    - STATE=mariadb.ci,mariadb,mariadb.server.salt
+    - STATE=mariadb.ci,mariadb
 
 matrix:
   include:
