@@ -3,7 +3,7 @@
 {%- set stable_version = '10.1' %}
 {%- set repo_version = salt['pillar.get']('mariadb:repo_version', None) %}
 {%- set version = salt['pillar.get']('mariadb:version', 'latest') %}
-{%- set repourl = salt['pillar.get']('mariadb:repourl', 'https://mirror.serverion.com/mariadb') %}
+{%- set repourl = salt['pillar.get']('mariadb:repourl', 'http://ftp.nluug.nl/db/mariadb') %}
 
 {% if sls == "mariadb.client.repo" %}{% set id_prefix = "mariadb_client" -%}
 {% elif sls == "mariadb.server.repo" %}{% set id_prefix = "mariadb_server" -%}
